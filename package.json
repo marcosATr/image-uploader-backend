@@ -6,6 +6,7 @@
   "main": "src/main.js",
   "scripts": {
     "dev": "nodemon node src/main.js"
+    "start": "node src/main.js"
   },
   "keywords": [],
   "author": "",
