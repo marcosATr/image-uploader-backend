@@ -1,7 +1,6 @@
 import { uploadImage } from "../controllers/uploadImage.js";
 import express from "express";
 import multer from "multer";
-// require("dotenv").config();
 
 
 var storage = multer.diskStorage({

@@ -1,8 +1,9 @@
 import express from "express";
 import { routes } from "./routes/index.js";
-import cors from 'cors'
+import cors from "cors";
+import dotenv from "dotenv";
 
-
+dotenv.config();
 const app = express();
 app.use(cors());
 app.use(express.json());
@@ -12,11 +13,9 @@ app.use(function (req, res, next) {
   next();
 });
 
-app.listen(3333, ()=>{
-  console.log('Listening on http://localhost:3333');
-})
+app.listen(process.env.PORT || 3333);
 
-app.use(express.static('photos'))
+app.use(express.static("photos"));
 app.use(routes);
 
 app.use((req, res, next) => {
